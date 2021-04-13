@@ -17,8 +17,16 @@ Do the following:
 
    HINT: no function required
 */
-
-
+  const votingAge= 21;
+  function votingAgeFunction(age){
+    if (age >= 18){
+      console.log(true);
+    }
+    else{
+      console.log(false);
+    }
+  }
+  console.log(votingAgeFunction(votingAge));
 
 /*
 Task 1b - Values
@@ -30,9 +38,6 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
 
 
 /*
@@ -58,10 +63,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a*b;
   }
 
+  console.log(multiply(4,5))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +80,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  let dogAge= age*7;
+  return dogAge;
 }
-
+console.log(dogYears(7));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -106,11 +113,39 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
+// Define whether dog is adult or puppy
+// figure out amount of raw food in pounds
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+
+  function hungryDog(weight,age){
+    if (age >= 1){
+      if(weight <= 5){
+        return weight*0.05;
+      }
+      else if(weight >= 6 && weight <= 10){
+        return weight*0.04;
+      }
+      else if(weight >= 11 && weight <= 15){
+        return weight*0.03;
+      }
+      else if(weight > 15){
+        return weight*0.02;
+      }
+    
+    if(age < 1){
+      if(age >= 0.16667 && age < 0.3333){
+        return weight*0.1;
+      }
+      else if(age >= 0.3333 && age < 0.5833){
+        return weight*0.05;
+      }
+      else if(age >= 0.5833 && age < 1){
+        return weight*0.04;
+      }
+    }
+    console.log(hungryDog(15,2))
+    }
   }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -133,6 +168,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+var randomNumber= Math.round(Math.random())
 
 function game(user, computer){
     /*add your code here*/
@@ -150,11 +186,11 @@ Using the miles function below do the following:
   2. Convert the number of kiolmeters received to miles
   3. Return the number of miles
 */
-
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    let m= km * 0.621371;
+    return m;
   }
-
+console.log(miles(20));
 
 
 //Task 5b - Feet to CM
@@ -164,11 +200,11 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
-
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    let ft= cm / 30.48;
+    return ft;
   }
- 
+ console.log(feet(20));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
